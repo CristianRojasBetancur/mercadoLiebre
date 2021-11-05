@@ -1,23 +1,36 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto';
+    overflow-x: hidden;
 }
 
-body p {
-    font-size: 12px;
+.header-row-logo img {
+    max-width: 250px;
+}
+
+.header-row-logo h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .titular {
-    font-size: 24px;
+    font-size: 22px;
+    color: #666;
+    margin-left: 20px;
 }
 
 .precio {
     font-size: 18px;
+    width: 30%;
 }
 
 .desc {
     font-size: 16px;
+    width: 70%;
+    color: #39b54a;
 }
 
 section article img {
@@ -26,7 +39,7 @@ section article img {
 
 header {
     background-color: #EAC926;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 header p {
@@ -42,23 +55,170 @@ header nav ul li a {
     color: #000;
 }
 
-.contenedor {
-    display: flex;
-    justify-content: center;
-}
-
 .burger-menu {
-    display: inline;
-    background-color: #1259c3;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #03264C;
+    color: #fff;
+    display: block;
     text-align: center;
+    max-width: 40px;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin: auto;
 }
 
 .burger-menu i {
-    color: #fff;
+    font-size: 18px;
 }
 
 .contenedor-footer {
     text-align: center;
+}
+
+.left-nav, .right-nav {
+    display: none;
+}
+
+.contenedor-main {
+    background-color: #ebebeb;
+    width: 100vw;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.info-producto {
+    max-width: 90%;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.name {
+    padding-top: 15px;
+    color: #666;
+}
+
+.precio-descuento {
+    display: flex;
+}
+
+.contenedor-main .articulo i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 75px
+}
+
+.articulos-ultima-visita {
+    width: 100vw;
+    margin: auto;
+}
+
+.articulo {
+    max-width: 80vw;
+    background-color: #fff;
+    margin: 20px auto;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.articulo img {
+    max-width: 100%;
+    border-bottom: #ebebeb solid 1px;
+}
+
+.articulo p {
+    text-align: start;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+    .left-nav, .right-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .left-nav ul, .right-nav ul {
+        display: flex;
+    }
+    .header-nav-container li {
+        margin: 0 5px;
+    }
+    .header-nav-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-row-logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .header-row-logo h2 {
+        max-width: 250px;
+        text-align: end;
+    }
+    .header-row-logo img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .articulos-ultima-visita, .contenedor-ofertas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .articulo {
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-main {
+        width: 100%;
+    }
+    .header-nav-container, .header-row-logo {
+        max-width: 1920px;
+        margin: auto;
+    }
+    .header-nav-container {
+        justify-content: space-between;
+        max-width: 90%;
+    }
+    .header-row-logo {
+        margin-bottom: 10px;
+        align-items: center;
+        max-width: 90%;
+        justify-content: space-between;
+    }
+    .header-row-logo h2 {
+        max-width: none;
+        font-size: 20px;
+    }
+    .header-row-logo img {
+        max-width: 400px;
+    }
+    .header-nav-container li {
+        margin: 0 10px;
+    }
+    .contenedor-main {
+        max-width: 100%;
+    }
+    .articulos-ultima-visita {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .articulo {
+        max-width: 20%;
+    }
+    .titular {
+        margin-left: 40px;
+    }
 }
