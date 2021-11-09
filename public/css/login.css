@@ -3,53 +3,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
-    overflow-x: hidden;
 }
 
 .header-row-logo img {
     max-width: 250px;
-    display: block;
-    margin: auto;
-    min-width: 250px;
 }
 
 .header-row-logo h2 {
     font-size: 20px;
-    margin-bottom: 15px;
-    max-width: 380px;
     text-align: center;
-    margin: auto;
-    min-width: 380px;
+    margin-bottom: 15px;
 }
 
-.titular {
-    font-size: 22px;
-    color: #666;
-    margin-left: 20px;
-}
-
-.precio {
-    font-size: 18px;
-    width: 30%;
-}
-
-.desc {
-    font-size: 16px;
-    width: 70%;
-    color: #39b54a;
-}
-
-section article img {
-    max-width: 100vw;
-}
-
-.header-main {
+header {
     background-color: #EAC926;
     padding-bottom: 20px;
-    position: fixed;
-    z-index: 20;
-    width: 100%;
-    min-width: 360px;
 }
 
 header p {
@@ -74,8 +42,6 @@ header nav ul li a {
     padding: 8px 0;
     border-radius: 8px;
     margin: auto;
-    margin-top: 20px;
-    min-width: 40px;
 }
 
 .burger-menu i {
@@ -92,86 +58,35 @@ header nav ul li a {
 
 .contenedor-main {
     background-color: #ebebeb;
-    width: 100vw;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 190px;
-    min-width: 360px;
+    padding: 15px;
 }
 
-.info-producto {
-    max-width: 90%;
-    margin: 10px auto;
-    box-sizing: border-box;
+.formulario input {
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 14px 0;
+    width: 100%;
 }
 
-.name {
-    padding-top: 15px;
-    color: #666;
+.formulario button {
+    width: 100%;
+    border: none;
+    padding: 8px 35px;
+    border-radius: 4px;
+    background-color: #1259c3;
+    color: #fff;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
-.precio-descuento {
-    display: flex;
+.formulario button:hover {
+    background-color: #0022AA;
 }
-
-.contenedor-main .articulo i {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    color: #39b54a;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    bottom: 75px
-}
-
-.articulos-ultima-visita {
-    width: 100vw;
-    margin: auto;
-}
-
-.articulo {
-    max-width: 80vw;
-    background-color: #fff;
-    margin: 20px auto;
-    padding-bottom: 10px;
-    position: relative;
-}
-
-.articulo img {
-    max-width: 100%;
-    border-bottom: #ebebeb solid 1px;
-}
-
-.articulo p {
-    text-align: start;
-}
-
-.articulo i {
-    transition: all 450ms;
-}
-
-.articulo:hover .info-producto i {
-    transform: rotate( -45deg)
-}
-
-
 
 /* MEDIA QUERIES */
 
 @media (min-width: 768px) {
-    .header-main {
-        position: fixed;
-        width: 100%;
-        z-index: 20;
-    }
-    .contenedor-main {
-        margin-top: 135px;
-    }
     .burger-menu {
         display: none;
     }
@@ -203,12 +118,13 @@ header nav ul li a {
         max-width: 250px;
         margin-bottom: 20px;
     }
-    .articulos-ultima-visita, .contenedor-ofertas {
-        display: flex;
-        flex-wrap: wrap;
+    .contenedor-main h3 {
+        text-align: center;
+        margin-top: 5px;
     }
-    .articulo {
-        max-width: 45%;
+    .formulario {
+        width: 60vw;
+        margin: auto;
     }
 }
 
@@ -242,7 +158,6 @@ header nav ul li a {
     }
     .contenedor-main {
         max-width: 100%;
-        margin-top: 184px;
     }
     .articulos-ultima-visita {
         display: flex;
@@ -260,7 +175,9 @@ header nav ul li a {
         margin: 20px 0;
     }
     .copyright {
-        margin-bottom: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
     }
     .article-footer i {
         font-size: 30px;
